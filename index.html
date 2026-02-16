@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ilir Krasniqi – Software Engineer from Pristina, Kosovo. Experience in React, TypeScript, Node.js, and full-stack development. Portfolio of web applications and projects." />
+  <title>Ilir Krasniqi – Software Engineer | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="theme-light.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="theme-light.css" /></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" /></noscript>
+  <link rel="icon" id="favicon" href="favicon.svg" type="image/svg+xml" />
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('portfolioTheme');
+        var fav = document.getElementById('favicon');
+        if (t === 'light') { document.documentElement.classList.add('theme-light'); if (fav) fav.href = 'favicon-light.svg'; }
+        else if (t === 'dark') { document.documentElement.classList.remove('theme-light'); if (fav) fav.href = 'favicon.svg'; }
+      } catch (e) {}
+      window._portfolioFaviconPaths = { dark: 'favicon.svg', light: 'favicon-light.svg' };
+    })();
+  </script>
+</head>
+<body>
+  <a href="#section-home" class="skip-link">Skip to main content</a>
+  <div class="container">
+    <!-- Left panel: Navigation -->
+    <aside class="controls">
+      <div class="panel-header">
+        <span class="panel-title">Portfolio</span>
+      </div>
+
+      <nav class="nav-sections" aria-label="Main navigation">
+        <button type="button" class="nav-item active" data-section="home" aria-current="page">
+          <span class="material-symbols-outlined nav-icon">home</span>
+          <span class="nav-label">Home</span>
+        </button>
+        <button type="button" class="nav-item" data-section="experience">
+          <span class="material-symbols-outlined nav-icon">work</span>
+          <span class="nav-label">Experience</span>
+        </button>
+        <button type="button" class="nav-item" data-section="projects">
+          <span class="material-symbols-outlined nav-icon">folder</span>
+          <span class="nav-label">Key Projects</span>
+        </button>
+        <button type="button" class="nav-item" data-section="tech">
+          <span class="material-symbols-outlined nav-icon">code</span>
+          <span class="nav-label">Tech Stack</span>
+        </button>
+        <button type="button" class="nav-item" data-section="education">
+          <span class="material-symbols-outlined nav-icon">school</span>
+          <span class="nav-label">Education</span>
+        </button>
+        <button type="button" class="nav-item" data-section="contact">
+          <span class="material-symbols-outlined nav-icon">contact_mail</span>
+          <span class="nav-label">Contact</span>
+        </button>
+      </nav>
+
+      <div class="controls-footer" role="group" aria-label="Interface theme">
+        <div class="theme-row">
+          <span class="theme-switch-label">Dark</span>
+          <button type="button" id="themeSwitch" class="theme-switch" role="switch" aria-checked="false" aria-label="Use light theme">
+            <span class="theme-switch-track">
+              <span class="theme-switch-thumb"></span>
+            </span>
+          </button>
+          <span class="theme-switch-label">Light</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="panel-resizer" id="resizerLeft" role="separator" aria-orientation="vertical" title="Drag to resize panel"></div>
+
+    <!-- Main content -->
+    <main class="content-wrapper">
+      <div class="content-toolbar">
+        <h1 class="content-title">Ilir Krasniqi</h1>
+        <p class="content-subtitle">Software Engineer</p>
+      </div>
+
+      <div class="content-scroll">
+        <section id="section-home" class="content-section active" aria-labelledby="heading-home">
+          <h2 id="heading-home" class="section-heading">Hello! I'm Ilir Krasniqi</h2>
+          <p class="section-lead">A Software Engineer from Pristina, Kosovo.</p>
+          <p>Strong experience in both front-end and back-end development. Skilled in creating responsive, accessible, and performant websites.</p>
+          <p>Proven track record in system optimization, database management, and UI/UX design. Demonstrated ability to develop and manage complex web applications.</p>
+          <p class="section-hint">Click a section on the left to learn more about my work and past experiences.</p>
+          <p class="section-actions">
+            <a href="https://ilir.netlify.app/ilir-krasniqi-cv.pdf" class="btn-panel btn-primary" target="_blank" rel="noopener noreferrer" download>Download Resume (PDF)</a>
+          </p>
+        </section>
+
+        <section id="section-experience" class="content-section" aria-labelledby="heading-experience" hidden>
+          <h2 id="heading-experience" class="section-heading">Experience</h2>
+          <p class="section-intro">Professional experience across full-stack development, accounting systems, and IT support.</p>
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <span class="timeline-role">Software Engineer</span>
+              <span class="timeline-company">@ Secro Inc</span>
+              <span class="timeline-date">Dec 2025 – Present</span>
+              <ul class="timeline-bullets">
+                <li>In charge of supporting clients and ensuring smooth onboarding and ongoing technical assistance.</li>
+                <li>Create new flows for new clients based on sales team needs, tailoring solutions to each client’s requirements.</li>
+                <li>Replace third-party applications in our process with in-house solutions to improve control, reliability, and cost efficiency.</li>
+                <li>Develop and maintain automated QA test suites covering all application flows.</li>
+              </ul>
+              <span class="timeline-tags">React · TypeScript · Node.js · NestJS</span>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-role">Full-Stack Developer</span>
+              <span class="timeline-company">@ Planet Accounting</span>
+              <span class="timeline-date">Jan 2023 – Dec 2025</span>
+              <ul class="timeline-bullets">
+                <li>Led the front-end design of the Planet Accounting web program, ensuring a user-friendly and visually appealing interface.</li>
+                <li>Developed a comprehensive school management system for a reputable school in Kosovo, tailored to their operational needs.</li>
+                <li>Integrated the school management system into the Planet Accounting program, enabling centralized financial reporting and streamlined access to accounting data.</li>
+                <li>Optimized back-end development processes by monitoring and testing methods for improving database query efficiency.</li>
+              </ul>
+              <span class="timeline-tags">JavaScript · PHP · SQL · HTML/CSS</span>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-role">Full-Stack Developer</span>
+              <span class="timeline-company">@ Green Mills General Trading L.L.C</span>
+              <span class="timeline-date">Jan 2020 – Jan 2023</span>
+              <ul class="timeline-bullets">
+                <li>Developed and maintained the company's internal inventory management system to improve operational efficiency.</li>
+                <li>Integrated real-time data synchronization features to ensure accuracy and reduce delays in inventory updates.</li>
+                <li>Enhanced back-end architecture with scalable solutions, optimizing database queries and data handling for high-volume operations.</li>
+                <li>Conducted rigorous testing and debugging to ensure the system's reliability, security, and performance across multiple user roles.</li>
+              </ul>
+              <span class="timeline-tags">React · Node.js · PostgreSQL · AWS</span>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-role">IT Technician</span>
+              <span class="timeline-company">@ Exclusive Globex Group</span>
+              <span class="timeline-date">May 2018 – Jan 2020</span>
+              <ul class="timeline-bullets">
+                <li>Created and maintained the company's business website, ensuring it met branding and functional requirements.</li>
+                <li>Installed, configured, and maintained devices including desktops, laptops, and peripherals to support operational efficiency.</li>
+                <li>Managed all technological aspects of the company, ensuring smooth operation across hardware and software platforms.</li>
+              </ul>
+              <span class="timeline-tags">Support · Hardware · Documentation</span>
+            </li>
+          </ul>
+        </section>
+
+        <section id="section-projects" class="content-section" aria-labelledby="heading-projects" hidden>
+          <div id="projectListViewModel">
+            <h2 id="heading-projects" class="section-heading">Key Projects</h2>
+            <p class="section-intro">Selected web applications and systems I’ve built or contributed to. Click a project to read more.</p>
+            <div class="project-cards">
+            <article class="project-card" data-project-id="markdown-editor" tabindex="0" role="button">
+              <h3 class="project-card-title">Markdown Editor</h3>
+              <p class="project-card-desc">Client-side markdown editor with split view and live preview. Features: outline from headings, export to HTML/PDF/Word, find &amp; replace, formatting toolbar, dark/light theme, resizable panels, and optional draft auto-save.</p>
+              <span class="project-card-tags">HTML · CSS · JavaScript · marked.js · html2pdf</span>
+            </article>
+            <article class="project-card" data-project-id="label-designer" tabindex="0" role="button">
+              <h3 class="project-card-title">Label Designer (Label Maker)</h3>
+              <p class="project-card-desc">Client-side web app for designing printable labels. Canvas with text, QR codes, barcodes, shapes, lines, SVG/images; layers panel and properties; import/export JSON, XML, PNG, PDF, ZPL; print support. Same Photoshop-style UI as the Markdown Editor.</p>
+              <span class="project-card-tags">HTML · CSS · JavaScript · Fabric.js · Vite · jsPDF</span>
+            </article>
+            <article class="project-card" data-project-id="planet-accounting" tabindex="0" role="button">
+              <h3 class="project-card-title">Planet Accounting Web Program</h3>
+              <p class="project-card-desc">Full-stack web application for accounting workflows: invoicing, reporting, and data management. Includes role-based access, dashboards, and export features.</p>
+              <span class="project-card-tags">React · TypeScript · Node.js · PostgreSQL</span>
+            </article>
+            <article class="project-card" data-project-id="lead-generator" tabindex="0" role="button">
+              <h3 class="project-card-title">Lead Generator (ImportInfo → Seamless AI)</h3>
+              <p class="project-card-desc">Automation that pulls lead data from ImportInfo and feeds it into Seamless AI. Handles mapping, validation, and scheduled runs for qualified sales leads.</p>
+              <span class="project-card-tags">JavaScript · Node.js · API · Automation</span>
+            </article>
+            <article class="project-card" data-project-id="national-theater-kosovo" tabindex="0" role="button">
+              <h3 class="project-card-title">National Theater of Kosovo — Management Tool</h3>
+              <p class="project-card-desc">Management system for productions, scheduling, cast and crew, and operational reporting. Supports planning and day-to-day theater administration.</p>
+              <span class="project-card-tags">React · TypeScript · Node.js · PostgreSQL</span>
+            </article>
+          </div>
+          </div>
+          <div id="projectDetailView" class="project-detail-view hidden">
+            <a href="#" id="projectDetailBack" class="project-detail-back"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span><span class="project-detail-back-text">All projects</span></a>
+            <h2 id="projectDetailTitle" class="section-heading project-detail-title"></h2>
+            <div class="project-detail-block">
+              <h3 class="project-detail-label">Why I built this</h3>
+              <p id="projectDetailReason" class="project-detail-reason"></p>
+            </div>
+            <div class="project-detail-block">
+              <h3 class="project-detail-label">UI / UX</h3>
+              <p id="projectDetailUiUx" class="project-detail-uiux"></p>
+            </div>
+            <div class="project-detail-block">
+              <h3 class="project-detail-label">Overview</h3>
+              <p id="projectDetailOverview" class="project-detail-overview"></p>
+            </div>
+            <div class="project-detail-gallery" id="projectDetailGallery" aria-label="Project screenshots"></div>
+            <div class="project-detail-block">
+              <h3 class="project-detail-label">Tech</h3>
+              <div class="project-detail-tech" id="projectDetailTech"></div>
+            </div>
+            <div class="project-detail-links" id="projectDetailLinks"></div>
+          </div>
+        </section>
+
+        <section id="section-tech" class="content-section" aria-labelledby="heading-tech" hidden>
+          <h2 id="heading-tech" class="section-heading">Tech Stack</h2>
+          <p class="section-intro">Technologies and tools I use for building and deploying web applications.</p>
+          <div class="tech-groups">
+            <div class="tech-group">
+              <h3 class="tech-group-title">Frontend</h3>
+              <div class="tech-grid">
+                <span class="tech-badge" title="HTML5 – Markup structure">HTML5</span>
+                <span class="tech-badge" title="CSS3 – Styling and layout">CSS3</span>
+                <span class="tech-badge" title="JavaScript – Client-side scripting">JavaScript</span>
+                <span class="tech-badge" title="TypeScript – Typed JavaScript">TypeScript</span>
+                <span class="tech-badge" title="React – UI library">React</span>
+              </div>
+            </div>
+            <div class="tech-group">
+              <h3 class="tech-group-title">Backend &amp; Runtime</h3>
+              <div class="tech-grid">
+                <span class="tech-badge" title="Node.js – JavaScript runtime">Node.js</span>
+                <span class="tech-badge" title="NestJS – Node.js framework">NestJS</span>
+                <span class="tech-badge" title="PHP – Server-side language">PHP</span>
+                <span class="tech-badge" title="Java – Backend and applications">Java</span>
+              </div>
+            </div>
+            <div class="tech-group">
+              <h3 class="tech-group-title">Database</h3>
+              <div class="tech-grid">
+                <span class="tech-badge" title="PostgreSQL – Relational database">PostgreSQL</span>
+                <span class="tech-badge" title="SQL – Database queries">SQL</span>
+              </div>
+            </div>
+            <div class="tech-group">
+              <h3 class="tech-group-title">Tools &amp; Cloud</h3>
+              <div class="tech-grid">
+                <span class="tech-badge" title="Git – Version control">Git</span>
+                <span class="tech-badge" title="AWS – Cloud platform">AWS</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section-education" class="content-section" aria-labelledby="heading-education" hidden>
+          <h2 id="heading-education" class="section-heading">Education</h2>
+          <p class="section-intro">Formal education and continuous learning in technology and development.</p>
+          <div class="education-block">
+            <span class="education-school">Rochester Institute of Technology</span>
+            <span class="education-degree">Associate Degree (May 2025)</span>
+            <p class="education-desc">Focus on applied technology and information technology. Coursework in programming, web development, databases, and system design, supporting my transition into full-stack development.</p>
+          </div>
+        </section>
+
+        <section id="section-contact" class="content-section" aria-labelledby="heading-contact" hidden>
+          <h2 id="heading-contact" class="section-heading">Contact</h2>
+          <p class="section-intro">I’m open to new opportunities and collaborations. Reach out by email or phone, or get an indicative quote below.</p>
+          <div class="contact-list">
+            <a href="mailto:ilirk18@gmail.com" class="contact-link">
+              <span class="material-symbols-outlined contact-icon">mail</span>
+              ilirk18@gmail.com
+            </a>
+            <a href="tel:+38343823137" class="contact-link">
+              <span class="material-symbols-outlined contact-icon">phone</span>
+              +383 (43) 823-137
+            </a>
+          </div>
+
+          <div class="quote-block" aria-labelledby="quote-heading">
+            <h3 id="quote-heading" class="quote-heading">Request a quote</h3>
+            <p class="quote-intro">Get an indicative range for your project. Final scope and pricing will be confirmed after we discuss your needs.</p>
+            <div class="quote-form">
+              <div class="quote-field">
+                <label for="quote-type">Project type</label>
+                <select id="quote-type" class="quote-select">
+                  <option value="website">Website (marketing, landing, multi-page)</option>
+                  <option value="webapp">Web application (dashboard, SaaS, tools)</option>
+                  <option value="consulting">Consulting / technical advisory</option>
+                  <option value="maintenance">Ongoing maintenance or support</option>
+                  <option value="other">Other / custom</option>
+                </select>
+              </div>
+              <div class="quote-field">
+                <label for="quote-scope">Scope</label>
+                <select id="quote-scope" class="quote-select">
+                  <option value="small">Small (1–3 weeks)</option>
+                  <option value="medium" selected>Medium (3–8 weeks)</option>
+                  <option value="large">Large (2–4 months)</option>
+                </select>
+              </div>
+              <div class="quote-field">
+                <label for="quote-timeline">Timeline</label>
+                <select id="quote-timeline" class="quote-select">
+                  <option value="standard" selected>Standard</option>
+                  <option value="rush">Rush (faster delivery)</option>
+                </select>
+              </div>
+            </div>
+            <div class="quote-result" id="quote-result" aria-live="polite" aria-atomic="true">
+              <span class="quote-result-label">Estimated range</span>
+              <span class="quote-result-value" id="quote-result-value">—</span>
+            </div>
+            <p class="quote-disclaimer">Indicative only. Contact me for a detailed proposal.</p>
+          </div>
+
+          <div class="links-block">
+            <span class="links-label">Links</span>
+            <a href="https://ilir.netlify.app/ilir-krasniqi-cv.pdf" class="btn-panel btn-primary contact-download" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+            <a href="https://github.com/ilirk18" class="btn-panel contact-download" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="panel-resizer" id="resizerRight" role="separator" aria-orientation="vertical" title="Drag to resize panel"></div>
+
+    <!-- Right panel: Quick info -->
+    <aside class="layers-panel">
+      <div class="panel-header">
+        <span class="panel-title">About</span>
+      </div>
+      <div class="about-content">
+        <p class="about-text">Hi, I'm <strong>Ilir Krasniqi</strong>. Software Engineer from Pristina, Kosovo.</p>
+        <p class="about-text">Strong experience in front-end and back-end development, system optimization, database management, and UI/UX design.</p>
+        <p class="about-fun">When I'm not coding: coffee, podcasts, or a good walk.</p>
+        <div class="about-shortcuts">
+          <span class="shortcut-chip"><span class="shortcut-keys"><kbd>1</kbd>–<kbd>6</kbd></span><span class="shortcut-label">Jump to section</span></span>
+          <span class="shortcut-chip"><span class="shortcut-keys"><kbd>&lt;</kbd>–<kbd>&gt;</kbd></span><span class="shortcut-label">Switch to section</span></span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div id="comparisonExpandModal" class="comparison-expand-modal hidden" role="dialog" aria-modal="true" aria-label="Before and after — full size">
+    <div class="comparison-expand-backdrop" id="comparisonExpandBackdrop"></div>
+    <div class="comparison-expand-content">
+      <div class="comparison-expand-header">
+        <span class="comparison-expand-title">Before &amp; After — full size</span>
+        <span class="comparison-expand-zoom-hint">Scroll on an image to zoom</span>
+        <button type="button" class="comparison-expand-close" id="comparisonExpandClose" aria-label="Close">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="comparison-expand-body" id="comparisonExpandBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
