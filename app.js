@@ -477,7 +477,8 @@
       linksEl.innerHTML = "";
       if (project.liveUrl) {
         var liveLink = document.createElement("a");
-        liveLink.href = project.liveUrl;
+        var theme = getTheme();
+        liveLink.href = project.liveUrl + (project.liveUrl.indexOf("?") >= 0 ? "&" : "?") + "theme=" + theme;
         liveLink.target = "_blank";
         liveLink.rel = "noopener noreferrer";
         liveLink.className = "btn-panel btn-primary project-detail-link";
@@ -630,13 +631,26 @@
       const next = getTheme() === "light" ? "dark" : "light";
       setTheme(next);
       updateThemeSwitch();
+      setupHomeWebAppLinks();
     });
+  }
+
+  function setupHomeWebAppLinks() {
+    const theme = getTheme();
+    const markdown = PROJECTS.find(function (p) { return p.id === "markdown-editor"; });
+    const label = PROJECTS.find(function (p) { return p.id === "label-designer"; });
+    const sep = function (url) { return url.indexOf("?") >= 0 ? "&" : "?"; };
+    const mdEl = document.getElementById("homeWebAppMarkdown");
+    const lbEl = document.getElementById("homeWebAppLabel");
+    if (markdown && markdown.liveUrl && mdEl) mdEl.href = markdown.liveUrl + sep(markdown.liveUrl) + "theme=" + theme;
+    if (label && label.liveUrl && lbEl) lbEl.href = label.liveUrl + sep(label.liveUrl) + "theme=" + theme;
   }
 
   setTheme(getTheme());
   setupPanelResizers();
   setupNavigation();
   setupProjectCards();
+  setupHomeWebAppLinks();
   setupComparisonExpandModal();
   setupKeyboard();
   setupThemeSwitch();

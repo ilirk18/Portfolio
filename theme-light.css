@@ -97,6 +97,23 @@ html.theme-light .section-hint {
   color: #888;
 }
 
+html.theme-light .web-apps-heading {
+  color: #555;
+}
+html.theme-light .web-app-link {
+  color: #333;
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+html.theme-light .web-app-link:hover {
+  background: #eee;
+  border-color: #0d7acc;
+  color: #111;
+}
+html.theme-light .web-app-icon {
+  color: #0d7acc;
+}
+
 html.theme-light .timeline-item {
   border-bottom-color: #e0e0e0;
 }
