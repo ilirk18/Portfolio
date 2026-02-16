@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const THEME_KEY = "portfolioTheme";
+  const THEME_KEY = "ilirTheme";
   const CONTROLS_WIDTH_KEY = "portfolioControlsWidth";
   const LAYERS_PANEL_WIDTH_KEY = "portfolioLayersPanelWidth";
   const SECTION_KEY = "portfolioSection";

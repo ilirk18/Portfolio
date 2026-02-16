@@ -17,7 +17,7 @@
   <script>
     (function(){
       try {
-        var t = localStorage.getItem('portfolioTheme');
+        var t = localStorage.getItem('ilirTheme');
         var fav = document.getElementById('favicon');
         if (t === 'light') { document.documentElement.classList.add('theme-light'); if (fav) fav.href = 'favicon-light.svg'; }
         else if (t === 'dark') { document.documentElement.classList.remove('theme-light'); if (fav) fav.href = 'favicon.svg'; }
