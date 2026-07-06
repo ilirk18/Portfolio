@@ -1,488 +1,74 @@
-/* Portfolio – Light theme. Applies when html has .theme-light */
+/* Light theme — "morning paper": warm paper tones, ink text, moss accent.
+   Applies when <html> has .theme-light. The ASCII stage switches to a
+   printed edition: dark ink characters on paper, always daytime. */
 
 html.theme-light {
-  background: #e8e8e8;
+  --bg: #e9e3d4;
+  --panel: #f3eee1;
+  --panel-head: #ece5d4;
+  --surface: #faf6ea;
+  --surface-2: #f1ebdc;
+  --border: #d9d1bc;
+  --border-strong: #c3b99f;
+  --text: #272b23;
+  --text-soft: #575b4c;
+  --text-dim: #86897a;
+  --accent: #3e7d33;
+  --accent-strong: #2f6427;
+  --accent-ink: #f4f8ee;
+  --accent-dim: rgba(62, 125, 51, 0.12);
+  --amber: #a86e22;
+  --amber-dim: rgba(168, 110, 34, 0.14);
+  --danger: #b0452c;
+  --stage-bg: #ede7d8;
+  --grain: rgba(40, 36, 22, 0.028);
+  --scroll-track: #e4ddcc;
+  --scroll-thumb: #c3b99f;
+  --scroll-thumb-hover: #a89d81;
+  --shadow: rgba(60, 52, 30, 0.22);
+
+  background: var(--bg);
 }
 
-html.theme-light .controls {
-  background: #f5f5f5;
-  border-right-color: #d0d0d0;
+/* Selection stays readable on paper */
+html.theme-light ::selection {
+  background: var(--accent);
+  color: #fff;
 }
 
-html.theme-light .panel-header {
-  background: #ebebeb;
-  border-bottom-color: #d0d0d0;
+/* The postcard becomes a print: paper stage, sepia vignette, ink badge */
+html.theme-light .welcome-stage::before {
+  background: radial-gradient(ellipse 90% 70% at 50% 40%, transparent 45%, rgba(120, 104, 70, 0.18) 100%);
 }
 
-html.theme-light .panel-title {
-  color: #505050;
+html.theme-light .welcome-copy {
+  background: linear-gradient(180deg, transparent 0%, rgba(243, 238, 225, 0.92) 22%, rgba(243, 238, 225, 0.98) 100%);
+  border-top-color: rgba(62, 125, 51, 0.25);
 }
 
-html.theme-light .nav-item {
-  color: #555;
+html.theme-light .welcome-hero-badge {
+  color: var(--amber);
+  text-shadow: 0 1px 3px rgba(255, 253, 246, 0.7);
 }
 
-html.theme-light .nav-item:hover {
-  background: #e8e8e8;
-  color: #222;
+/* Darker dropdown arrow for paper background */
+html.theme-light .quote-select {
+  --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23575b4c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* Soften the top glow so the content column reads like a lit page */
+html.theme-light .content-wrapper {
+  background-image: radial-gradient(ellipse 120% 80% at 50% 0%, rgba(255, 253, 246, 0.9) 0%, transparent 55%);
+}
+
+html.theme-light .theme-switch[aria-checked="true"] .theme-switch-thumb {
+  background: #fff;
 }
 
 html.theme-light .nav-item.active {
-  background: rgba(13, 122, 204, 0.2);
-  color: #0d7acc;
-  border-left-color: #0d7acc;
+  color: var(--accent-strong);
 }
 
-html.theme-light .controls-footer {
-  background: #ebebeb;
-  border-top-color: #e0e0e0;
-}
-
-html.theme-light .panel-resizer {
-  background: #ebebeb;
-  border-left-color: #d0d0d0;
-  border-right-color: #d0d0d0;
-}
-
-html.theme-light .panel-resizer:hover,
-html.theme-light .panel-resizer.resizing {
-  background: #0d7acc;
-  border-left-color: #0d7acc;
-  border-right-color: #0d7acc;
-}
-
-html.theme-light .content-wrapper {
-  background-color: #e8eef4;
-  background-image:
-    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(13, 122, 204, 0.18) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 40% at 85% 25%, rgba(13, 122, 204, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse 70% 60% at 50% 85%, rgba(13, 122, 204, 0.1) 0%, transparent 50%);
-}
-
-html.theme-light .content-toolbar {
-  background: #ebebeb;
-  border-bottom-color: #d0d0d0;
-}
-
-html.theme-light .content-title {
-  color: #222;
-}
-
-html.theme-light .content-subtitle {
-  color: #666;
-}
-
-html.theme-light .section-heading {
-  color: #222;
-  border-bottom-color: rgba(13, 122, 204, 0.35);
-}
-
-html.theme-light #section-home .section-lead {
-  color: #1a1a1a;
-}
-
-html.theme-light .section-lead {
-  color: #333;
-}
-
-html.theme-light .content-section p {
-  color: #444;
-}
-
-html.theme-light .section-intro {
-  color: #555;
-}
-
-html.theme-light .section-hint {
-  color: #888;
-}
-
-html.theme-light .web-apps-heading {
-  color: #555;
-}
-html.theme-light .web-app-link {
-  color: #333;
-  background: #f5f5f5;
-  border-color: #ccc;
-}
-html.theme-light .web-app-link:hover {
-  background: #eee;
-  border-color: #0d7acc;
-  color: #111;
-}
-html.theme-light .web-app-icon {
-  color: #0d7acc;
-}
-
-html.theme-light .timeline-item {
-  border-bottom-color: #e0e0e0;
-}
-
-html.theme-light .timeline-item:hover {
-  background: rgba(0, 0, 0, 0.04);
-  border-left-color: rgba(13, 122, 204, 0.45);
-}
-
-html.theme-light .timeline-role {
-  color: #222;
-}
-
-html.theme-light .timeline-company {
-  color: #0d7acc;
-}
-
-html.theme-light .timeline-date {
-  color: #666;
-}
-
-html.theme-light .timeline-desc {
-  color: #555;
-}
-
-html.theme-light .timeline-bullets {
-  color: #555;
-}
-
-html.theme-light .timeline-tags {
-  color: #0d7acc;
-}
-
-html.theme-light .project-card {
-  background: #fafafa;
-  border-color: #bbb;
-}
-
-html.theme-light .project-card-title {
-  color: #222;
-}
-
-html.theme-light .project-card-desc {
-  color: #555;
-}
-
-html.theme-light .project-card-tags {
-  color: #0d7acc;
-}
-
-html.theme-light .project-card[role="button"]:hover {
-  border-color: #999;
-  background: #f0f0f0;
-}
-
-html.theme-light .project-card[role="button"]:hover .project-card-title {
-  color: #0d7acc;
-}
-
-html.theme-light .project-detail-back {
-  color: #0d7acc;
-}
-
-html.theme-light .project-detail-label {
-  color: #666;
-}
-
-html.theme-light .project-detail-reason,
-html.theme-light .project-detail-uiux,
-html.theme-light .project-detail-overview {
-  color: #444;
-}
-
-html.theme-light .project-detail-carousel {
-  border-color: #ccc;
-  background: #eee;
-}
-
-html.theme-light .project-detail-carousel-btn {
-  background: rgba(0, 0, 0, 0.4);
-  border-color: #999;
-  color: #fff;
-}
-
-html.theme-light .project-detail-carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-html.theme-light .project-detail-dot {
-  background: #bbb;
-}
-
-html.theme-light .project-detail-dot:hover {
-  background: #999;
-}
-
-html.theme-light .project-detail-dot.active {
-  background: #0d7acc;
-}
-
-html.theme-light .project-detail-comparison {
-  border-color: #ccc;
-  background: #eee;
-}
-
-html.theme-light .project-detail-comparison-handle,
-html.theme-light .project-detail-comparison-handle-grip {
-  background: #0d7acc;
-}
-
-html.theme-light .project-detail-comparison-label {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-html.theme-light .project-detail-comparison-hint {
-  color: #888;
-}
-
-html.theme-light .comparison-expand-content {
-  background: #fafafa;
-  border-color: #ccc;
-}
-
-html.theme-light .comparison-expand-header {
-  background: #f0f0f0;
-  border-bottom-color: #e0e0e0;
-}
-
-html.theme-light .comparison-expand-title {
-  color: #222;
-}
-
-html.theme-light .comparison-expand-close {
-  color: #555;
-}
-
-html.theme-light .comparison-expand-close:hover {
-  background: rgba(0, 0, 0, 0.06);
-  color: #222;
-}
-
-html.theme-light .comparison-expand-cell-label {
-  color: #666;
-}
-
-html.theme-light .comparison-expand-cell img {
-  border-color: #ccc;
-}
-
-html.theme-light .comparison-expand-zoom-wrap {
-  border-color: #ccc;
-  background: #eee;
-}
-
-html.theme-light .comparison-expand-zoom-hint {
-  color: #666;
-}
-
-html.theme-light .project-detail-comparison-expand-btn {
-  background: rgba(0, 0, 0, 0.4);
-  border-color: #999;
-  color: #fff;
-}
-
-html.theme-light .project-detail-comparison-expand-btn:hover {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-html.theme-light .project-detail-links {
-  border-top-color: #e0e0e0;
-}
-
-html.theme-light .tech-group-title {
-  color: #666;
-}
-
-html.theme-light .education-desc {
-  color: #555;
-}
-
-html.theme-light .tech-badge {
-  background: #e8e8e8;
-  border-color: #bbb;
-  color: #333;
-}
-
-html.theme-light .education-block {
-  background: #fafafa;
-  border-color: #bbb;
-}
-
-html.theme-light .education-school {
-  color: #222;
-}
-
-html.theme-light .education-degree {
-  color: #666;
-}
-
-html.theme-light .contact-link {
-  color: #0d7acc;
-}
-
-html.theme-light .links-label {
-  color: #666;
-}
-
-html.theme-light .quote-block {
-  background: #f0f0f0;
-  border-color: #d0d0d0;
-}
-
-html.theme-light .quote-heading {
-  color: #222;
-}
-
-html.theme-light .quote-intro {
-  color: #555;
-}
-
-html.theme-light .quote-field label {
-  color: #666;
-}
-
-html.theme-light .quote-select {
-  color: #222;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 12px;
-  border-color: #ccc;
-}
-
-html.theme-light .quote-select:hover {
-  border-color: #999;
-}
-
-html.theme-light .quote-select:focus {
-  border-color: #0d7acc;
-}
-
-html.theme-light .quote-result {
-  background: rgba(13, 122, 204, 0.1);
-  border-color: rgba(13, 122, 204, 0.35);
-}
-
-html.theme-light .quote-result-label {
-  color: #0d7acc;
-}
-
-html.theme-light .quote-result-value {
-  color: #111;
-}
-
-html.theme-light .quote-disclaimer {
-  color: #777;
-}
-
-html.theme-light .btn-panel {
-  color: #333;
-  background: #fff;
-  border-color: #bbb;
-}
-
-html.theme-light .btn-panel:hover:not(:disabled) {
-  background: #f0f0f0;
-  border-color: #999;
-  color: #111;
-}
-
-html.theme-light .btn-panel.btn-primary {
-  background: #0a69b5;
-  border-color: #0a69b5;
-  color: #fff;
-}
-
-html.theme-light .layers-panel {
-  background: #f5f5f5;
-  border-left-color: #d0d0d0;
-}
-
-html.theme-light .about-content {
-  color: #555;
-}
-
-html.theme-light .about-text strong {
-  color: #222;
-}
-
-html.theme-light .about-fun {
-  color: #666;
-}
-
-html.theme-light .about-shortcuts {
-  border-top-color: #e0e0e0;
-}
-
-html.theme-light .shortcut-chip {
-  color: #555;
-  background: #f0f0f0;
-  border-color: #ddd;
-}
-
-html.theme-light .about-shortcuts kbd {
-  background: #fff;
-  border-color: #ccc;
-  color: #333;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-html.theme-light .theme-switch-label {
-  color: #555;
-}
-
-html.theme-light .theme-switch-track {
-  background: #e0e0e0;
-  border-color: #bbb;
-}
-
-html.theme-light .theme-switch:hover .theme-switch-track {
-  background: #d8d8d8;
-  border-color: #aaa;
-}
-
-html.theme-light .theme-switch-thumb {
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-html.theme-light .theme-switch[aria-checked="true"] .theme-switch-track {
-  background: #0d7acc;
-  border-color: #0d7acc;
-}
-
-html.theme-light .theme-switch[aria-checked="true"]:hover .theme-switch-track {
-  background: #1a8ae0;
-  border-color: #1a8ae0;
-}
-
-html.theme-light .controls,
-html.theme-light .content-scroll,
-html.theme-light .about-content,
-html.theme-light .comparison-expand-body,
-html.theme-light .comparison-expand-zoom-wrap {
-  scrollbar-color: #bbb #e8e8e8;
-}
-
-html.theme-light .controls::-webkit-scrollbar-track,
-html.theme-light .content-scroll::-webkit-scrollbar-track,
-html.theme-light .about-content::-webkit-scrollbar-track,
-html.theme-light .comparison-expand-body::-webkit-scrollbar-track,
-html.theme-light .comparison-expand-zoom-wrap::-webkit-scrollbar-track {
-  background: #e8e8e8;
-}
-
-html.theme-light .controls::-webkit-scrollbar-thumb,
-html.theme-light .content-scroll::-webkit-scrollbar-thumb,
-html.theme-light .about-content::-webkit-scrollbar-thumb,
-html.theme-light .comparison-expand-body::-webkit-scrollbar-thumb,
-html.theme-light .comparison-expand-zoom-wrap::-webkit-scrollbar-thumb {
-  background: #bbb;
-  border-color: #e8e8e8;
-}
-
-html.theme-light .controls::-webkit-scrollbar-thumb:hover,
-html.theme-light .content-scroll::-webkit-scrollbar-thumb:hover,
-html.theme-light .about-content::-webkit-scrollbar-thumb:hover,
-html.theme-light .comparison-expand-body::-webkit-scrollbar-thumb:hover,
-html.theme-light .comparison-expand-zoom-wrap::-webkit-scrollbar-thumb:hover {
-  background: #999;
+html.theme-light .comparison-expand-backdrop {
+  background: rgba(50, 44, 26, 0.55);
 }
