@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0b0e10"/>
+  <rect x="40" y="36" width="720" height="378" rx="8" fill="#10141a" stroke="#33404d"/>
+  <path d="M40 44a8 8 0 0 1 8-8h704a8 8 0 0 1 8 8v26H40z" fill="#0d1116"/>
+  <text x="64" y="58" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#a9a89b">teatri — production board</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="15">
+    <text x="72" y="106" fill="#8fd07c">## season 2025/26 — main stage</text>
+    <text x="72" y="140" fill="#767a70">┌──────────────────────┬────────────┬──────────┐</text>
+    <text x="72" y="166" fill="#e8e4d9">│ production           │ rehearsal  │ premiere │</text>
+    <text x="72" y="192" fill="#767a70">├──────────────────────┼────────────┼──────────┤</text>
+    <text x="72" y="218" fill="#a9a89b">│ hamleti              │ <tspan fill="#8fd07c">in progress</tspan>│ 14 nov   │</text>
+    <text x="72" y="244" fill="#a9a89b">│ kush ka frikë...     │ <tspan fill="#f2b95c">casting</tspan>    │ 09 jan   │</text>
+    <text x="72" y="270" fill="#a9a89b">│ zana e malit         │ planned    │ 22 mar   │</text>
+    <text x="72" y="296" fill="#767a70">└──────────────────────┴────────────┴──────────┘</text>
+    <text x="72" y="332" fill="#a9a89b">cast: 34 · crew: 21 · stages: 2 · reports: weekly</text>
+  </g>
+  <rect x="72" y="352" width="484" height="36" rx="4" fill="none" stroke="#33404d" stroke-dasharray="5 4"/>
+  <text x="88" y="375" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" fill="#f2b95c">// confidential client work — screenshots on request</text>
+</svg>

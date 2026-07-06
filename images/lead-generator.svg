@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0b0e10"/>
+  <rect x="40" y="36" width="720" height="378" rx="8" fill="#10141a" stroke="#33404d"/>
+  <path d="M40 44a8 8 0 0 1 8-8h704a8 8 0 0 1 8 8v26H40z" fill="#0d1116"/>
+  <circle cx="64" cy="53" r="5" fill="#e07a5f"/>
+  <circle cx="82" cy="53" r="5" fill="#f2b95c"/>
+  <circle cx="100" cy="53" r="5" fill="#8fd07c"/>
+  <text x="122" y="58" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#a9a89b">lead-pipeline — zsh</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="16">
+    <text x="72" y="108" fill="#8fd07c">$ <tspan fill="#e8e4d9">importinfo pull --batch weekly</tspan></text>
+    <text x="94" y="136" fill="#a9a89b">↳ 1,284 leads fetched · 0 errors</text>
+    <text x="72" y="176" fill="#8fd07c">$ <tspan fill="#e8e4d9">map --target seamless-ai --validate</tspan></text>
+    <text x="94" y="204" fill="#a9a89b">↳ 1,271 mapped · 13 skipped (missing email)</text>
+    <text x="72" y="244" fill="#8fd07c">$ <tspan fill="#e8e4d9">push --schedule daily 06:00</tspan></text>
+    <text x="94" y="272" fill="#8fd07c">✓ pipeline green — next run in 11h 24m</text>
+    <text x="72" y="312" fill="#8fd07c">$ <tspan fill="#767a70">▋</tspan></text>
+  </g>
+  <rect x="72" y="346" width="484" height="36" rx="4" fill="none" stroke="#33404d" stroke-dasharray="5 4"/>
+  <text x="88" y="369" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" fill="#f2b95c">// confidential client work — live demo on request</text>
+</svg>
